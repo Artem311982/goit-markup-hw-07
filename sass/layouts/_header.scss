@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--other-color-wight);
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+
+    letter-spacing: 0.02em;
+
+    color: var(--main-txt-cl);
+
+    &__list {
+        display: flex;
+        position: relative;
+
+
+    }
+
+    &__list .list-item {
+        margin-right: 50px;
+        margin-left: auto;
+    }
+
+    &__list .link {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    &__list .list-item:last-child {
+        margin-right: 0;
+    }
+}

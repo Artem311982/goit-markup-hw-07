@@ -8,6 +8,12 @@ p {
     margin: 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 img {
     display: block;
 }
@@ -20,7 +26,7 @@ img {
 }
 
 .list,
-.header-list {
+.header__list {
     list-style: none;
     padding: 0;
     margin: 0;
