@@ -18,11 +18,16 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-}
+    }
 
     &__path {
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    }
+        
+    &__btn:hover &__path {
+            fill: var(--accent-bg-cl);
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .modal-form {
@@ -43,7 +48,7 @@
         margin-bottom: 12px;
     }
     
-        &__input {
+    &__input {
         width: 448px;
         height: 40px;
         padding-left: 42px;
@@ -53,7 +58,7 @@
         transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-        &__field {
+    &__field {
         display: flex;
         position: relative;
         flex-direction: column;
@@ -63,7 +68,7 @@
         outline-color: transparent;
     }
     
-        &__icon {
+    &__icon {
         position: absolute;
         top: 50%;
         left: 12px;
@@ -71,17 +76,17 @@
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-        &__field:focus-within &___input {
+    &__field:focus-within &___input {
         outline-color: #2196F3;
         transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-        &__field:focus-within &__icon {
+    &__field:focus-within &__icon {
         fill: #2196F3;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-        &__field:focus-within &__comment {
+    &__field:focus-within &__comment {
         outline-color: #2196F3;
         transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -131,17 +136,80 @@
         border-radius: 2px;
     }
 
-    .checkbox:checked+&__checkbox-icon {
-        background-image: url(../images/Vector.svg);
-        background-origin: border-box;
-        border: 0;
-        border-radius: 2px;
-    }
-
     &__lable-link {
         margin-left: 4px;
 
         color: var(--accent-txt-cl);
+    }
+
+    &__comment {
+        width: 448px;
+        height: 120px;
+
+        padding: 12px 16px;
+
+        resize: none;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        margin-bottom: 20px;
+        outline-color: transparent;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+        color: var(--btn-bg-cl);
+
+        border: 0;
+        background: var(--accent-bg-cl);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+}
+
+.checkbox:checked+.modal-form__checkbox-icon {
+    background-image: url(../images/Vector.svg);
+    background-origin: border-box;
+    border: 0;
+    border-radius: 2px;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+.modal__btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    background-color: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover &__path {
+        fill: var(--accent-bg-cl);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
